@@ -8,8 +8,14 @@ public class S03 {
      * @return "positive", "negative", or "zero"
      */
     public static String checkSign(int value) {
-        // TODO
-        return "";
+        if (value == 0) {
+        return "zero";
+    }
+        else {
+        	if (value > 0)
+        		return "positive";
+        		else return "negative";
+        }
     }
 
     /**
@@ -19,8 +25,10 @@ public class S03 {
      * @return "odd" or "even"
      */
     public static boolean isOdd(int value) {
-        // TODO
-        return false;
+        if (value % 2 != 0) 
+        	return true;
+        	else return false;
+      
     }
 
     /**
@@ -30,8 +38,7 @@ public class S03 {
      * @return "zero" for 0 ... "nine" for 9, or "other"
      */
     public static String asWord(int value) {
-        // TODO
-        return "";
+                return "";
     }
 
     /**
@@ -54,8 +61,9 @@ public class S03 {
      * @return true if leap year
      */
     public static boolean isLeapYear(int year) {
-        // TODO
-        return false;
+    	if(year % 4 == 0)
+    		return true;
+    	else return false;
     }
 
     /**
@@ -68,8 +76,8 @@ public class S03 {
      */
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
+        
 
-        // TODO
 
         return result;
     }
