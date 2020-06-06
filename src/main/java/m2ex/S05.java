@@ -8,8 +8,12 @@ public class S05 {
 	 * @return the input reversed
 	 */
 	public static String reverse(String s) {
-		// TODO
-		return "";
+		StringBuilder ribaltata = new StringBuilder("");
+        for (int i = s.length() - 1; 0 <= i; i--) {
+            ribaltata.append(s.charAt(i));
+        }
+        String result = ribaltata.toString();
+        return result;
 	}
 
 	/**
@@ -19,8 +23,20 @@ public class S05 {
 	 * @return true if the parameter is a palindrome
 	 */
 	public static boolean isPalindrome(String s) {
-		// TODO
-		return false;
+		 if (s.length() % 2 != 0) {
+	            return false;
+	        }
+
+	        int ultimo = s.length();
+	        int meta =  ultimo/ 2;
+
+	        for (int i = 0; i < meta; i++) {
+	            if (s.charAt(i) != s.charAt(ultimo -i - 1)) {
+	                return false;
+	            }
+	        }
+	        return true;
+	
 	}
 
 	/**
@@ -43,10 +59,19 @@ public class S05 {
 	 * @return the converted integer
 	 */
 	public static int bin2dec(String s) {
-		// [1][0][0][0][1]
-	    // 43_210
-	    // 2
-		return 0;
+		int sum = 0;
+		int[] binario  = new int[s.length()];
+		
+		for (i=0;i<s.length();i++) {
+			
+			binario[i] = Character.getNumericValue(s.charAt(i));}
+			
+			for (i=0; i<binario.length;i++) {
+				 sum = sum + (binario[i] *  Math.pow(2,binario-i-1));
+			
+			
+		}
+		return sum;
 	}
 
 	/**

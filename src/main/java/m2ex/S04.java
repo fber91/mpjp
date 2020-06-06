@@ -48,6 +48,8 @@ public class S04 {
 	 * @return calculated square root
 	 */
 	public static double sqrt(double value) {
+		
+	value = Math.abs(value);
 		double epsilon;
 		double root =value;
 		double next_root = 0.5 * (root + (value/root));
